@@ -1,0 +1,14 @@
+{
+  "distro_version": "1.1",
+  "avatar_id": null,
+  "current_stage": "acolhimento",
+  "capabilities": {"read_package": null, "see_photos": null, "generate_edit_images": null, "run_code": null},
+  "briefing": {"display_name": null, "represented_age_informed": null, "appearance_description": null, "purpose": null},
+  "photo_gate": {"status": "pending", "per_photo": [], "coverage_gaps": []},
+  "identity_gate": {"status": "pending", "master_files": [], "approved_by": null, "approved_at": null},
+  "next_user_action": null,
+  "pending_decisions": [],
+  "delivered_files": [],
+  "technical_tests": [],
+  "limitations": []
+}

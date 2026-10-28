@@ -1,0 +1,14 @@
+interface:
+  display_name: Imagens para avatares
+  short_description: Geração edição por texto resize e resample de avatares
+  default_prompt: Use $avatar-imagens para gerar ou editar meu avatar mantendo a identidade
+    aprovada.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: false
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas

@@ -1,0 +1,41 @@
+{
+  "input_240.png": {
+    "original_inalterado": true,
+    "dimensoes": [
+      240,
+      240
+    ],
+    "regiao_central_replica_exata_2x2": true,
+    "valores_alfa": [
+      0,
+      128,
+      255
+    ],
+    "sha256": "6d314e3ea682fb9f6e00d5c98310d69a07eae85b1da9d2648381897abc6c9171",
+    "margens_transparentes": true,
+    "paleta_preservada": true
+  },
+  "mask_240.png": {
+    "original_inalterado": true,
+    "dimensoes": [
+      240,
+      240
+    ],
+    "regiao_central_replica_exata_2x2": true,
+    "valores_alfa": [
+      255
+    ],
+    "sha256": "d2b57311d7fa12e8b5718d2e0951dc8fac64a546c0c470ddee667924684b7c9c",
+    "mascara_binaria_opaca": true,
+    "margens_pretas_protegidas": true
+  },
+  "geracao_de_imagem": false,
+  "transformacao_sincronizada": {
+    "scale_x": 2,
+    "scale_y": 2,
+    "offset_x": 40,
+    "offset_y": 0,
+    "recorte": false
+  },
+  "revisao_visual": "Entradas e saídas inspecionadas pelo agente; avaliação do usuário pendente."
+}

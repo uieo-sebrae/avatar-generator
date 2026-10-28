@@ -1,0 +1,7 @@
+{
+  "description": "Triagem técnica complementar à análise visual. face_bbox é opcional, marcado pela IA ou operador na foto após correção de orientação EXIF; o script não detecta faces.",
+  "photos": [
+    {"id": "F01", "file": "../suas_fotos/frente.jpg", "face_bbox": null},
+    {"id": "F02", "file": "../suas_fotos/tres_quartos.png", "face_bbox": null}
+  ]
+}

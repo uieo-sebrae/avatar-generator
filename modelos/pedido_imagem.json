@@ -1,0 +1,13 @@
+{
+  "action": "edit",
+  "instruction": "Mudar somente a expressão para um sorriso discreto",
+  "images": [
+    {"file": "../seu_avatar/base.png", "role": "imagem alvo e base operacional"},
+    {"file": "../seu_avatar/folha_mestra.png", "role": "identidade estilizada aprovada"}
+  ],
+  "identity": "Preencher com a descrição curta da ficha validada",
+  "invariants": ["silhueta facial", "cabelo", "acessórios", "roupa", "enquadramento"],
+  "allowed_changes": ["boca e pequena transição local autorizada"],
+  "style": "Manter o hi-bit e a iluminação da base",
+  "background": "Preservar transparência real da base"
+}

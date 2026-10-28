@@ -1,0 +1,8 @@
+{
+  "description": "Exemplo de cores de acessórios e roupas. Os nomes das partes são livres; use máscaras reais do mesmo tamanho da base e remova partes ausentes.",
+  "parts": {
+    "vestido": {"mask": "../seu_avatar/mascaras/vestido.png", "mode": "ramp", "source_luma": [30, 120, 220], "colors": ["#442044", "#A85A99", "#EAC5E4"]},
+    "armacao": {"mask": "../seu_avatar/mascaras/armacao.png", "mode": "ramp", "source_luma": [10, 70, 150], "colors": ["#331A0D", "#8F5528", "#D7AE6C"]},
+    "brinco": {"mask": "../seu_avatar/mascaras/brinco.png", "mode": "ramp", "source_luma": [30, 140, 235], "colors": ["#514729", "#C7A44A", "#F8E7A8"]}
+  }
+}

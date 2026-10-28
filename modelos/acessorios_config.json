@@ -1,0 +1,7 @@
+{
+  "description": "Exemplo. Camadas precisam estar desenhadas para esta vista e escala. Ordem da lista define sobreposição. Branco na oclusão esconde o acessório. Não há encaixe automático.",
+  "layers": [
+    {"id": "brinco", "enabled": true, "file": "../seu_avatar/acessorios/brinco_frente.png", "position": [180, 140], "occlusion_mask": "../seu_avatar/mascaras/cabelo_frente.png"},
+    {"id": "chapeu", "enabled": false, "file": "../seu_avatar/acessorios/chapeu_frente.png", "position": [120, 20]}
+  ]
+}

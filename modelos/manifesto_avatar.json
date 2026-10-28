@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "example_only": true,
+  "avatar_id": "pessoa01",
+  "master": {"version": null, "file": null, "sha256": null, "approved_by": null, "approved_at": null},
+  "coordinate_system": {"origin": "top_left", "x": "right", "y": "down", "rect": "x_y_width_height", "bbox_end": "exclusive"},
+  "items": [{
+    "id": "pessoa01_social_neutro_frente_v1",
+    "file": null,
+    "source_files": [],
+    "source_hashes": [],
+    "outfit_geometry": "social_v1",
+    "palette_id": null,
+    "view": "frente",
+    "action": "neutro",
+    "canvas": null,
+    "pivot": null,
+    "duration_ms": null,
+    "masks": {},
+    "transforms": [],
+    "sha256": null,
+    "status": {"identity": "pendente", "artistic": "pendente", "technical": "pendente", "target": "pendente"},
+    "review_notes": []
+  }]
+}

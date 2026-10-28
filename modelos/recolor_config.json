@@ -1,0 +1,28 @@
+{
+  "description": "Exemplo a preencher. Caminhos relativos a este JSON. Use máscaras binárias do mesmo tamanho da imagem. Não executar sem adaptar.",
+  "parts": {
+    "camisa": {
+      "mask": "../seu_avatar/mascaras/camisa.png",
+      "mode": "exact",
+      "map": {"#133A89": "#14532D", "#2A4FDA": "#22A050", "#7990EC": "#A5D6B4"}
+    },
+    "calca": {
+      "mask": "../seu_avatar/mascaras/calca.png",
+      "mode": "ramp",
+      "source_luma": [35, 120, 220],
+      "colors": ["#302A24", "#8C7761", "#D8C9B4"]
+    },
+    "cinto": {
+      "mask": "../seu_avatar/mascaras/cinto.png",
+      "mode": "ramp",
+      "source_luma": [20, 60, 125],
+      "colors": ["#111111", "#333333", "#666666"]
+    },
+    "sapatos": {
+      "mask": "../seu_avatar/mascaras/sapatos.png",
+      "mode": "ramp",
+      "source_luma": [20, 80, 160],
+      "colors": ["#181C24", "#354153", "#778899"]
+    }
+  }
+}

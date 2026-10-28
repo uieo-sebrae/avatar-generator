@@ -1,0 +1,19 @@
+{
+  "avatar_id": "pessoa01",
+  "master_version": "preencher",
+  "action": "andar",
+  "direction": "sul",
+  "pivot": [128, 480],
+  "loop": true,
+  "status": {"identity": "pendente", "artistic": "pendente", "technical": "pendente", "target": "pendente"},
+  "frames": [
+    {"file": "../seu_avatar/andar_sul_f00.png", "duration_ms": 125, "phase": "contato_1"},
+    {"file": "../seu_avatar/andar_sul_f01.png", "duration_ms": 125, "phase": "apoio_1"},
+    {"file": "../seu_avatar/andar_sul_f02.png", "duration_ms": 125, "phase": "passagem_1"},
+    {"file": "../seu_avatar/andar_sul_f03.png", "duration_ms": 125, "phase": "alcance_1"},
+    {"file": "../seu_avatar/andar_sul_f04.png", "duration_ms": 125, "phase": "contato_2"},
+    {"file": "../seu_avatar/andar_sul_f05.png", "duration_ms": 125, "phase": "apoio_2"},
+    {"file": "../seu_avatar/andar_sul_f06.png", "duration_ms": 125, "phase": "passagem_2"},
+    {"file": "../seu_avatar/andar_sul_f07.png", "duration_ms": 125, "phase": "alcance_2"}
+  ]
+}

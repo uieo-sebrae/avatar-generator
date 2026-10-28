@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Felipe Cruz de Melo"><meta name="description" content="Guia simples para criar um avatar com condução por IA"><title>Referência técnica da metodologia de avatares</title><style>
+:root{--ink:#1c2d32;--muted:#52676c;--paper:#fbfaf6;--line:#dce4df;--brand:#17634e;--pale:#e9f3ed}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}a{color:var(--brand);text-underline-offset:3px}main{max-width:940px;margin:auto;padding:42px 28px 72px}header{padding:16px 0 30px;border-bottom:1px solid var(--line)}.eyebrow{font-size:12px;letter-spacing:.13em;font-weight:750;color:var(--brand);text-transform:uppercase}h1{font-size:clamp(32px,5vw,50px);line-height:1.12;letter-spacing:-.035em;max-width:760px;margin:14px 0 20px}h2{font-size:27px;line-height:1.25;margin:0 0 16px;letter-spacing:-.02em}h3{font-size:20px;line-height:1.35;margin:24px 0 9px}p{margin:0 0 15px}.lead{font-size:20px;max-width:740px;color:var(--muted)}.meta{font-size:14px;color:var(--muted)}nav{display:flex;gap:8px;flex-wrap:wrap;padding:22px 0}nav a{padding:6px 12px;text-decoration:none;border:1px solid var(--line);border-radius:30px;font-size:14px}nav a:hover{background:var(--pale)}section{padding:34px 0;border-bottom:1px solid var(--line)}.num{color:var(--brand);font-size:14px;font-weight:750;display:block;letter-spacing:.08em;margin-bottom:7px}.start{padding:22px;background:var(--pale);border-radius:12px;margin:20px 0}.start p:last-child{margin-bottom:0}.prompt{display:block;font:inherit;width:100%;min-height:115px;resize:vertical;background:white;color:var(--ink);border:1px solid #9bb5a8;border-radius:6px;padding:14px;line-height:1.5}button,.button{border:0;border-radius:7px;background:var(--brand);color:white;padding:11px 16px;font:600 15px/1.4 system-ui;cursor:pointer;display:inline-block;margin-top:12px;text-decoration:none}button:hover,.button:hover{background:#104b3c}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #bb8612;outline-offset:3px}.secondary{background:transparent;color:var(--brand);border:1px solid #9bb5a8;margin-left:8px}.secondary:hover{color:white}ul,ol{padding-left:24px;margin:12px 0 18px}li{margin:8px 0}.table-scroll{overflow-x:auto;margin:18px 0}table{border-collapse:collapse;width:100%;font-size:15px}th,td{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top}th{background:var(--pale);font-weight:700}tbody tr:nth-child(even){background:#f5f7f3}details{margin:18px 0;padding:14px 0;border-top:1px solid var(--line)}summary{cursor:pointer;font-weight:650;color:var(--brand)}details[open]>summary{margin-bottom:16px}.note{font-size:15px;color:var(--muted)}.checklist label{display:flex;align-items:flex-start;gap:10px;margin:10px 0}.checklist input{margin-top:7px;width:17px;height:17px;accent-color:var(--brand)}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;border:1px solid var(--line);padding:18px;font:14px/1.6 ui-monospace,monospace}code{font:0.9em ui-monospace,monospace;overflow-wrap:anywhere}.reference{font-size:16px}.reference h2{font-size:28px}.reference h3{font-size:23px}.reference h4{font-size:18px}.reference table{font-size:14px}.reference td:first-child{min-width:140px}footer{padding-top:26px;color:var(--muted);font-size:14px}#copyStatus{min-height:25px;font-size:14px;color:var(--brand);margin-top:8px}.skip{position:absolute;left:-10000px}.skip:focus{position:static}.faq strong{color:var(--brand)}
+@media(max-width:600px){main{padding:24px 18px 48px}section{padding:28px 0}.start{padding:16px}h2{font-size:24px}.secondary{margin-left:0;display:block}th,td{padding:10px;font-size:14px}.lead{font-size:18px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}nav,button,.button,.checklist{display:none}section{padding:14px 0;break-inside:auto}h1{font-size:28pt}h2,h3{break-after:avoid}tr{break-inside:avoid}.technical-hidden{display:none}.start{background:#f2f5f2}a{color:black}details{border:0}.table-scroll{overflow:visible}}
+</style></head><body><main class="reference"><header><span class="eyebrow">Consulta técnica • versão 1.2</span><h1>Referência técnica</h1><p><strong>Autoria da metodologia e da documentação: Felipe Cruz de Melo</strong></p><p>Para começar sem termos técnicos, abra o guia simples.</p><a href="../ABRA_AQUI.html">Voltar ao guia simples</a></header><h2 id="t-0">Metodologia para criar avatares hi bit</h2>
+<p>Autoria da metodologia e da documentação da distro: <strong>Felipe Cruz de Melo</strong>.</p>
+<p>Manual de produção e distribuição • Versão 1.2 • 28 de outubro de 2026</p>
+<p>Esta metodologia permite transformar referências reais de uma pessoa em um avatar hi-bit consistente, personalizável e preparado para animação em diferentes aplicações. Ela reúne direção visual, geração de imagens, composição por máscaras, troca de cores e verificação técnica. O resultado esperado é uma biblioteca de versões do mesmo personagem com origem, limites e estado de aprovação conhecidos.</p>
+<p>O trabalho começa pela validação humana de uma folha mestra. A geração de imagens propõe novas representações; a edição localizada e a composição por código preservam o que já foi aceito. Nenhum prompt, medição ou teste de arquivo substitui o reconhecimento da pessoa pelo titular do avatar.</p>
+<p>O escopo abrange identidade, vistas, expressões, fala visual, poses, roupas, acessórios usados no corpo, personalização e movimentos. Cenários, objetos independentes, tokens, itens, interfaces e peças de jogo ficam fora da distro. As aplicações de destino podem usar os PNGs e as animações, mas suas regras e conteúdos não fazem parte deste manual.</p>
+<h3 id="t-12">Como usar esta distro</h3>
+<p>Para o usuário, o ponto de entrada é ABRA_AQUI.html. Ao receber o ZIP ou INICIAR_AVATAR.md com o pedido de início, a IA conduz as perguntas, a avaliação das fotos e a geração, preenchendo os registros conforme as respostas. As seções seguintes são consulta técnica para a IA ou operador; o leigo não precisa estudá-las para começar. Se faltar uma ferramenta, a IA informa a limitação na etapa correspondente.</p>
+<p>Os arquivos de prompts são instruções portáveis para uma conversa com uma IA que gere e edite imagens. Não instalam uma skill nem garantem acesso a ferramentas em outra conta. O kit de código funciona localmente e realiza somente operações determinísticas sobre imagens fornecidas.</p>
+<h4 id="t-18">Mapa de leitura</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Seção</th><th scope="col">Decisão ou execução</th></tr></thead><tbody>
+<tr><td>1 a 3</td><td>Evidência, ferramentas e responsabilidades</td></tr>
+<tr><td>4 a 7</td><td>Fotos, identidade, folha mestra e regras de fidelidade</td></tr>
+<tr><td>8 a 10</td><td>Geração, expressões e poses</td></tr>
+<tr><td>11 a 12</td><td>Roupas, cores e acessórios</td></tr>
+<tr><td>13 a 15</td><td>Animação e exportação</td></tr>
+<tr><td>16 a 18</td><td>Qualidade, reparos e distribuição</td></tr>
+<tr><td>19 a 21</td><td>Replicação, ferramentas e limites</td></tr>
+<tr><td>Anexos</td><td>Fontes, decisões e glossário</td></tr>
+</tbody></table></div>
+<h3 id="t-31">1 Origem e força das evidências</h3>
+<p>Esta versão se baseia na leitura dos documentos, manifestos e scripts dos onze ZIPs fornecidos no projeto Avatar para gamificação, na inspeção das principais pranchas e nas instruções disponíveis para geração de imagem. Não corresponde a uma nova auditoria integral de todos os quadros antigos. Os estados históricos abaixo reproduzem os registros dos pacotes, com as ressalvas neles documentadas.</p>
+<p>O início realizado no Claude é conhecido pelo relato do titular: várias fotos reais foram usadas para definir e validar a folha mestra do personagem. As instruções exatas, a seleção original das fotos e todas as iterações dessa conversa não estão disponíveis. A etapa de entrada deste manual é, portanto, uma reconstrução operacional proposta para reproduzir esse objetivo. Ela pode ser executada em outra ferramenta que aceite referências e edição de imagens.</p>
+<p>Três categorias orientam a leitura. Uma prática observada consta dos arquivos do projeto. Uma recomendação da distro generaliza essa prática para novos avatares. Um parâmetro ilustrativo demonstra uma configuração e precisa ser calibrado. Os números de Felipe não são padrões anatômicos para outras pessoas.</p>
+<h4 id="t-39">Lições verificáveis no acervo</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Registro do projeto</th><th scope="col">Consequência para o processo replicável</th></tr></thead><tbody>
+<tr><td>Onda 1 e pranchas fiéis mantidas como origem da identidade</td><td>Uma geração nova não redefine o rosto automaticamente</td></tr>
+<tr><td>Lote 01 preserva regiões fora das máscaras faciais</td><td>Usar composição localizada quando a base já está aceita</td></tr>
+<tr><td>Lente externa corrigida em revisão posterior</td><td>Testar transparência também em áreas internas e acessórios</td></tr>
+<tr><td>Lotes 02 e 03 distinguem arte nova de aprovação visual</td><td>Registrar aceite artístico separado da verificação técnica</td></tr>
+<tr><td>Lote 04 revisa rigidez de cabeça e ombros</td><td>Preservar o rosto não exige mantê-lo imóvel no canvas</td></tr>
+<tr><td>Lote 05 registra reconstrução e correção de lateralidade</td><td>Registrar fontes, transformações e exceções por quadro</td></tr>
+</tbody></table></div>
+<p>Uma proposta antiga sugeria reduzir a cabeça a 114 px e quantizar 40 cores. Os critérios posteriores do lote 01 orientam preservar o HD disponível e não aplicar essa redução automaticamente. A proposta de fidelidade também registra proporções medidas diferentes da ficha inicial. Esta distro preserva o original, calibra proporções na arte aprovada e trata redução e quantização como derivações opcionais.</p>
+<h3 id="t-52">2 Princípios de produção</h3>
+<p>A identidade tem uma origem explícita. Antes da estilização, as fotos e a declaração do titular orientam a aparência. Depois do aceite, a folha mestra assinada visualmente define a tradução gráfica. Fotos continuam úteis para resolver dúvidas, mas uma nova pose deve seguir a identidade estilizada já aprovada. Se houver conflito entre foto e estilização, interrompa a expansão e registre qual decisão o titular quer preservar.</p>
+<p>A produção usa uma base operacional por enquadramento e direção. Uma base HD aprovada pode facilitar o encaixe, sem substituir a origem da identidade. Mantenha a folha mestra disponível durante a revisão de cada lote; depender apenas da última geração acumula desvios.</p>
+<p>Separe quatro classes de mudança. Identidade envolve características reconhecíveis. Estilo envolve linguagem visual, textura e iluminação. Personalização envolve roupa e acessórios. Atuação envolve gesto, expressão e movimento. Definir uma classe não autoriza modificar as demais.</p>
+<p>Mudanças pequenas devem afetar regiões pequenas. Uma boca nova em um busto aceito pode ser proposta pelo gerador e montada somente na região autorizada. Trocar azul por verde em uma camisa deve usar uma máscara da camisa, sem nova geração. Uma manga curta, porém, muda a silhueta e pede outra geometria, seguida de revisão.</p>
+<h4 id="t-62">Responsabilidades mínimas</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Papel</th><th scope="col">Responsabilidade</th></tr></thead><tbody>
+<tr><td>Titular do avatar</td><td>Selecionar referências e aprovar semelhança e personalizações</td></tr>
+<tr><td>Direção visual</td><td>Definir estilo e conferir coerência entre vistas e expressões</td></tr>
+<tr><td>Operação de imagem</td><td>Gerar propostas e registrar fontes e instruções</td></tr>
+<tr><td>Preparação técnica</td><td>Compor, mascarar, alinhar, exportar e testar arquivos</td></tr>
+</tbody></table></div>
+<p>Uma pessoa pode acumular papéis. O importante é registrar qual avaliação foi feita. A frase “os arquivos passaram nos testes” não equivale a “o titular aprovou o rosto”.</p>
+<h3 id="t-73">3 Ferramentas e condições de execução</h3>
+<p>O percurso básico exige uma interface que receba várias imagens, gere e edite imagens, uma forma de visualizar PNGs com transparência e uma pasta para registrar referências e aprovações. Para máscaras e camadas, use um editor que permita selecionar regiões e exportar PNG sem alterar dimensões. Para automação local, o kit requer Python 3.10 ou superior, Pillow e NumPy.</p>
+<p>No ChatGPT Work, use a geração integrada de imagens para propor arte e edições. O módulo de imagem está integralmente fornecido em skills/avatar-imagens. Ler seu SKILL.md e os procedimentos de geração, edição por texto, resize e resample. Não é necessária uma skill externa; a geração ainda exige motor nativo da IA ou acesso autorizado à API. Uma máscara mencionada no prompt é uma orientação semântica; ela não comprova que os pixels externos foram preservados. A garantia técnica de preservação exige comparar arquivos e, quando necessário, compor efetivamente a alteração por máscara.</p>
+<p>Os prompts deste kit não dependem de um nome específico de modelo. Parâmetros de API, tamanhos, suporte a transparência e disponibilidade de ferramentas variam. Antes de automatizar uma API, confirme na documentação do provedor os parâmetros do modelo escolhido e faça um teste pequeno. Instruções como qualidade e fidelidade no texto do prompt não se tornam parâmetros técnicos automaticamente.</p>
+<p>A documentação oficial da OpenAI reconhece limitações de consistência e de posicionamento preciso e orienta verificar referências e transparência na saída [E1, E2]. Por isso, a distro acrescenta revisão visual e composição determinística. Não há promessa de reproduzir exatamente a mesma geração a partir do mesmo prompt.</p>
+<p>Registre a interface, a data, o modelo quando ele for exposto, as imagens anexadas e a instrução final usada. Se a interface não revelar o modelo, registre “não informado”. Nunca preencha metadados por suposição. A recriação de uma geração artística é diferente da reconstrução de uma composição a partir de fontes já guardadas.</p>
+<h3 id="t-85">4 Preparação das referências reais</h3>
+<p>Para começar o busto, reúna de quatro a seis fotos atuais de frente, sorriso e três quartos. Um acervo ampliado de seis a doze fotos pode atender corpo e outras vistas nas etapas seguintes. Esses intervalos são recomendações e não exigências do gerador. Mais fotos conflitantes podem atrapalhar. Não há necessidade de copiar documentos pessoais ou enviar informações sem relação com a aparência.</p>
+<h4 id="t-89">Conjunto de entrada sugerido</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Referência</th><th scope="col">Quantidade sugerida</th><th scope="col">Informação principal</th></tr></thead><tbody>
+<tr><td>Rosto frontal neutro e sorrindo</td><td>2</td><td>Formato, proporções e sorriso</td></tr>
+<tr><td>Rosto em três quartos de ambos os lados</td><td>2</td><td>Volume, nariz, mandíbula e cabelo</td></tr>
+<tr><td>Perfis de ambos os lados</td><td>2</td><td>Silhueta e assimetrias</td></tr>
+<tr><td>Corpo inteiro de frente e costas</td><td>2</td><td>Postura, proporção e roupa</td></tr>
+<tr><td>Detalhes pertinentes</td><td>0 a 4</td><td>Óculos, cabelo, acessórios e mãos</td></tr>
+</tbody></table></div>
+<p>Prefira luz difusa, foco no rosto, ausência de filtros e distância que evite distorção de grande angular. Como ponto de partida, procure fotos em que o rosto tenha ao menos cerca de 500 px de altura; é uma recomendação de legibilidade, não um limite técnico. Preserve os originais e a orientação correta, especialmente em selfies que possam estar espelhadas.</p>
+<p>Nomeie as fotos como F01, F02 e assim por diante. Indique data aproximada, vista, expressão, lado anatômico visível e finalidade. Se algumas imagens mostram barba, cabelo ou óculos antigos, marque-as como históricas. O titular deve escolher a aparência atual desejada, sem pedir que a IA faça uma média entre épocas diferentes.</p>
+<p>Antes de gerar, peça uma leitura descritiva dos traços visuais relevantes e confira com o titular. Não use a imagem para inferir etnia, saúde, personalidade ou outras características que não sejam necessárias à representação. Confirme explicitamente o lado de relógio, brincos, tatuagens e outros detalhes assimétricos.</p>
+<p>Antes da geração, a IA deve preencher modelos/AVALIACAO_FOTOS.md. Cada foto recebe usar, usar com ressalva ou substituir, com motivo sobre foco, luz, cor, filtro, cortes e partes escondidas. O conjunto precisa ser suficiente para a próxima saída; lacunas pedem fotos complementares. photo-audit auxilia com leitura, orientação EXIF, dimensão e indicadores de textura ou iluminação, sem detectar rostos ou certificar traços.</p>
+<p>Ao distribuir o método, entregue os modelos vazios. Fotos de uma pessoa e suas autorizações pertencem ao projeto individual. Esta distro não redistribui fotos nem imagens do avatar Felipe.</p>
+<h3 id="t-109">5 Briefing e ficha da identidade</h3>
+<p>Preencha modelos/BRIEFING.md e modelos/FICHA_IDENTIDADE.md. O briefing registra o uso previsto, a intensidade da estilização e as entregas iniciais. A ficha registra o que torna o personagem reconhecível e quais mudanças foram autorizadas. Uma boa ficha descreve o que se vê, em vez de depender de adjetivos como bonito ou simpático.</p>
+<p>Para cada traço, anote sua forma, posição relativa, cor observada e comportamento em outras vistas. “Cabelo castanho curto” é insuficiente se o reconhecimento depende de volume no topo, risca lateral e entradas específicas. Em óculos, registre formato, espessura da armação, visibilidade das hastes e tratamento das lentes.</p>
+<h4 id="t-115">Classes de atributos</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Classe</th><th scope="col">Exemplos</th><th scope="col">Regra de alteração</th></tr></thead><tbody>
+<tr><td>Identidade fixa</td><td>Silhueta facial, implantação do cabelo, proporções reconhecíveis</td><td>Novo aceite de identidade</td></tr>
+<tr><td>Aparência versionada</td><td>Corte de cabelo, barba, óculos característicos</td><td>Versão alternativa explicitamente aprovada</td></tr>
+<tr><td>Roupa</td><td>Modelo, comprimento, material e cores</td><td>Aceite da roupa; cores podem usar máscaras</td></tr>
+<tr><td>Acessório opcional</td><td>Chapéu, brinco, relógio, colar</td><td>Definir lado, escala, oclusão e compatibilidade</td></tr>
+<tr><td>Atuação</td><td>Boca, sobrancelha, olhar, gesto</td><td>Preservar estrutura e coerência anatômica</td></tr>
+</tbody></table></div>
+<p>Não imponha ao novo avatar os traços de Felipe. A metodologia deve servir a pessoas de diferentes idades, tons de pele, corpos e apresentações. Particularidades como barba e óculos só entram se forem pertinentes ao personagem em questão. O método atende homens, mulheres e pessoas de qualquer gênero ou idade representada. A idade e a aparência desejadas são informadas pelo usuário. Não se inferem identidade de gênero pelas fotos nem se adota uma anatomia adulta como padrão para crianças; pessoas idosas também devem manter os traços escolhidos, sem rejuvenescimento automático.</p>
+<p>Defina também o contrato de estilo: pixel art hi-bit, densidade visual, tipos de contorno, rampas de sombra, fonte de luz, tamanho dos olhos e grau de simplificação. Hi-bit designa aqui uma aparência de pixel art com mais detalhe e cores que estilos de baixa resolução; não é um formato de arquivo nem uma resolução universal. Um PNG grande pode conter ilustração lisa. O acabamento precisa ser visto no tamanho real de uso.</p>
+<h3 id="t-129">6 Construção e validação da folha mestra</h3>
+<p>Esta seção reconstrói a etapa inicial feita fora deste ambiente. Use prompts/01_FOTOS_E_DIAGNOSTICO.md e prompts/02_FOLHA_MESTRA.md. Comece com um busto neutro em três quartos, suficiente para discutir cabelo, olhos, nariz, boca, contorno facial e acessórios característicos. Proponha poucas alternativas comparáveis e peça que o titular aponte diferenças concretas. Evite produzir uma biblioteca inteira antes de acertar esse núcleo.</p>
+<p>Após aceitar o rosto, produza corpo inteiro frontal com roupa simples e confira a relação entre cabeça, tronco, membros e postura. O estilo pode exagerar proporções, desde que isso seja uma escolha aprovada. Não copie automaticamente razões antigas como 1 para 6 ou 1 para 4,2. Registre os pontos usados na medição; topo do cabelo até gola é diferente de topo do crânio até queixo.</p>
+<h4 id="t-135">Conteúdo mínimo da folha mestra</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Grupo</th><th scope="col">Conteúdo a validar</th></tr></thead><tbody>
+<tr><td>Identidade</td><td>Busto neutro e sorriso discreto em vista principal</td></tr>
+<tr><td>Vistas</td><td>Frente, três quartos, perfis e costas com lados identificados</td></tr>
+<tr><td>Corpo</td><td>Corpo inteiro na roupa base e proporções aceitas</td></tr>
+<tr><td>Expressões</td><td>Neutro, sorriso, fala, surpresa, pensativo e sério</td></tr>
+<tr><td>Especificação</td><td>Cores amostradas, iluminação, lateralidade e invariantes</td></tr>
+</tbody></table></div>
+<p>Produza e revise vistas individualmente, quando a geração conjunta provocar deriva. Monte a prancha por composição dos arquivos escolhidos. Uma prancha de apresentação pode ter rótulos adicionados por código ou editor; os recortes de produção devem permanecer sem rótulos, textos ou elementos de fundo.</p>
+<p>O titular confere a folha em tamanho de uso e ampliada. Registre o aceite com data, versão, nomes e SHA-256 dos arquivos. Uma observação como “rosto aprovado, corpo pendente” deve permanecer parcial. Quando tudo estiver aceito, congele a versão mestre e guarde uma cópia sem edições.</p>
+<p>Uma folha bonita que mostra rostos diferentes entre vistas não está pronta. Corrija a vista divergente usando o núcleo aprovado. Uma mudança posterior de identidade requer uma nova versão mestre e uma avaliação do impacto nos materiais derivados.</p>
+<h3 id="t-151">7 Contrato de fidelidade e medidas</h3>
+<p>As referências têm funções distintas. A folha mestra define a identidade estilizada; a base operacional define o encaixe de uma série; a imagem de gesto define a atuação; a amostra de roupa define a personalização. Rotule cada anexo no prompt para que um guia de pose não seja interpretado como novo rosto.</p>
+<p>Escreva um bloco fixo de identidade com descrições curtas dos traços decisivos. Reutilize esse bloco a cada solicitação, junto da referência visual. Acrescente apenas o que muda na tarefa atual. Se uma descrição antiga divergir da arte aprovada, corrija a ficha e registre a decisão antes de continuar.</p>
+<h4 id="t-157">Medições úteis por enquadramento</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Medida</th><th scope="col">Como registrar</th><th scope="col">Uso</th></tr></thead><tbody>
+<tr><td>Cabeça</td><td>Largura e altura com marcos definidos</td><td>Detectar alteração de volume</td></tr>
+<tr><td>Face</td><td>Linhas dos olhos, nariz e boca em proporção da cabeça</td><td>Comparar a mesma vista</td></tr>
+<tr><td>Corpo</td><td>Ombros, cintura e altura em relação à cabeça</td><td>Conferir escala e proporção</td></tr>
+<tr><td>Acessórios</td><td>Lado anatômico e relação com marcos locais</td><td>Evitar inversões e mudanças de tamanho</td></tr>
+<tr><td>Acabamento</td><td>Escala aparente dos blocos e rampas de cor</td><td>Detectar mudança de linguagem visual</td></tr>
+</tbody></table></div>
+<p>Meça primeiro as referências aceitas e só depois defina faixas. Como ponto inicial proposto, uma variação de até 5% em uma razão geométrica comparável pode gerar uma revisão, não uma aprovação automática. A tolerância real depende da vista, da expressão e da liberdade artística contratada. Valores não comparáveis devem ficar como “não aplicável”.</p>
+<p>Classificação automática por cor é particularmente frágil quando cabelo, roupa e armação compartilham tons. O projeto antigo chegou a excluir métricas instáveis. Medições ajudam a encontrar diferenças e não certificam que se trata da mesma pessoa. Expressões extremas e mudanças de câmera exigem critérios próprios.</p>
+<p>Na edição localizada, o teste mais forte é a igualdade RGBA fora da máscara. Se a cabeça só se desloca, compare-a depois de compensar a translação registrada. Não aplique esse teste a uma cabeça que deveria girar: uma rotação muda o que está visível e exige uma referência adequada à nova vista.</p>
+<h4 id="t-173">Registro geométrico antes da composição</h4>
+<p>Escolha marcos visíveis equivalentes na base e na proposta, como topo do cabelo, centro entre os olhos e início da gola. Estime a escala uniforme pela razão entre as distâncias correspondentes. Depois calcule a translação necessária para sobrepor o marco principal. Confira os demais marcos; se eles não se encaixarem, há mudança de perspectiva ou deformação e a proposta precisa de revisão. Não force o alinhamento esticando o rosto em eixos diferentes.</p>
+<p>Reamostre apenas a proposta que será encaixada, mantendo o master intacto. Use vizinho mais próximo quando o contrato de pixel art exigir e confira serrilhados, perda de detalhe e emendas. Se a alteração puder usar translação inteira sem escala, preserve os pixels dessa forma. Registre escala, deslocamento, recorte e método de amostragem. A operação não cria detalhe.</p>
+<p>Em uma máscara binária, o resultado copia a proposta nos pixels brancos e mantém a base nos pretos. Para expressões, o alfa da base pode ser copiado integralmente. Uma correção de silhueta ou de lente exige autorização para mudar também o alfa na região correspondente. O comando compose do kit executa essa substituição quando as imagens já estão alinhadas.</p>
+<h3 id="t-181">8 Produção de novas imagens</h3>
+<p>Para cada tarefa, escolha uma única saída principal: uma pose, uma expressão, uma vista ou um quadro. Pranchas conceituais ajudam a planejar, mas recortar uma prancha grande e ampliá-la não cria detalhe novo. Para qualidade individual, prefira gerar a peça com enquadramento e espaço suficientes, preservando o arquivo original recebido.</p>
+<p>Anexe a folha mestra, a base operacional e, se necessário, um guia de gesto. Explique o papel de cada imagem. O prompt deve declarar identidade, vista, enquadramento, roupa, atuação, luz, tratamento das bordas, transparência e alterações permitidas. Use prompts/03_VARIACAO_CONTROLADA.md como base.</p>
+<h4 id="t-187">Ciclo de geração e revisão</h4>
+<ol><li>Defina a diferença pretendida e as regiões que podem mudar.</li><li>Gere ou edite uma proposta com as referências corretas.</li><li>Compare com a folha mestra e a base; avalie rosto, proporção, mãos e acessórios.</li><li>Se o problema for local, peça somente o reparo local e preserve a versão anterior.</li><li>Se o gerador alterar outras áreas, componha a parte útil por máscara ou descarte a proposta.</li><li>Registre a fonte selecionada, o preparo aplicado e o estado de revisão.</li></ol>
+<p>Quando for necessário mudar câmera ou silhueta, permita alterações correspondentes em vez de exigir igualdade impossível de pixels. A direção visual decide se uma nova cabeça é necessária; a base operacional não deve ser colada sobre uma perspectiva incompatível.</p>
+<p>Defina um limite de tentativas por lote para detectar quando a abordagem falhou. Como recomendação operacional, após três tentativas com o mesmo desvio, volte ao briefing, ao enquadramento ou à base em vez de repetir o mesmo prompt. Esse número não é uma regra do gerador.</p>
+<p>Peça fundo realmente transparente. Um quadriculado desenhado não é transparência. Confira o canal alfa e visualize a imagem sobre fundos claro, escuro e saturado. Tratamentos de limpeza devem preservar as bordas e nunca transformar automaticamente lentes, pele ou reflexos em buracos.</p>
+<h3 id="t-202">9 Expressões e fala visual</h3>
+<p>Produza expressões sobre uma base estável. Separe boca, olhos e sobrancelhas em regiões de edição quando possível. A máscara da boca pode incluir uma pequena transição de pele, barba ou bigode; não deve alcançar nariz, queixo ou silhueta facial sem necessidade declarada. A anatomia e a intensidade emocional precisam ser conferidas depois da composição.</p>
+<p>Para montar uma variante, alinhe a proposta ao mesmo canvas da base, delimite a região autorizada e substitua os pixels dessa região. Máscaras binárias preservam a aparência de pixel art. Máscaras suaves podem ser úteis em alguns estilos, mas devem ser aprovadas porque introduzem mistura de cores. Sempre compare a imagem final, não apenas a intenção do prompt.</p>
+<p>No projeto Felipe, seis formas de fala foram preparadas sobre o mesmo busto: fechada M B P, A, E I, O U, F V e L. Esse agrupamento é um repertório visual simplificado e não constitui um sistema fonético completo. F V e L exigem avaliação de leitura; nem todos os sons de uma língua são distinguidos apenas pela boca.</p>
+<h4 id="t-210">Progressão recomendada</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Nível</th><th scope="col">Entrega</th><th scope="col">Condição para avançar</th></tr></thead><tbody>
+<tr><td>Expressões estáticas</td><td>Neutro, sorriso, sério, surpresa e pensativo</td><td>Semelhança e intensidade aceitas</td></tr>
+<tr><td>Piscar</td><td>Aberto, intermediário se necessário e fechado</td><td>Pálpebras coerentes, sem salto de rosto</td></tr>
+<tr><td>Fala demonstrativa</td><td>Sequência de bocas sem áudio</td><td>Identificada como demonstração</td></tr>
+<tr><td>Fala sincronizada</td><td>Áudio, tempos e associação de bocas</td><td>Conferência audiovisual na língua alvo</td></tr>
+</tbody></table></div>
+<p>Não chame uma sequência repetida de bocas de sincronização labial. Para sincronizar, é necessário fornecer áudio ou marcação temporal, idioma, duração e um critério de revisão. Um conjunto de PNGs também não é um rig facial.</p>
+<p>Ao reutilizar patches com alfa parcial, limpe a área de destino e substitua o recorte, ou faça substituição de pixels em um editor apropriado. Desenhar o patch repetidamente por cima pode aumentar a opacidade de lentes e bordas. Guarde base, proposta, máscara, posição e resultado para reconstrução.</p>
+<h3 id="t-223">10 Poses e reações expressivas</h3>
+<p>Comece com poses que preservem a leitura da pessoa: repouso, aceno, apontar, apresentar, joinha, explicar, braços cruzados e comemorar. A quantidade é modular. Uma primeira biblioteca pequena e aprovada vale mais como referência que dezenas de propostas divergentes.</p>
+<p>Descreva o gesto em termos concretos: braço que atua, mão de apoio, direção do olhar e enquadramento. “Apontar à esquerda” deve indicar a esquerda do observador; “relógio no pulso esquerdo” indica o lado anatômico do personagem. Use os dois referenciais explicitamente.</p>
+<p>Gere poses opostas individualmente quando houver assimetrias de rosto, cabelo ou acessórios. Espelhamento pode ser um recurso de composição se houver autorização e correção dos elementos assimétricos. No lote 05 de Felipe, o leste foi refeito a partir do corpo oeste espelhado, preservando a cabeça leste e corrigindo o relógio; essa exceção exigiu fontes, máscaras e receita de reconstrução.</p>
+<h4 id="t-231">Revisão de uma pose</h4>
+<ul><li>Confira dedos visíveis, polegares, articulações e sobreposição de braços.</li><li>Verifique se mangas, gola, botões e acessórios acompanham o gesto.</li><li>Confira se o recorte inclui mão, cabelo e detalhes necessários à leitura.</li><li>Compare tamanho e ângulo da cabeça com a referência apropriada.</li><li>Avalie a expressão em relação ao gesto, em tamanho de uso.</li></ul>
+<p>Reações como facepalm, dar de ombros, incredulidade e comemoração podem ampliar o repertório. Referências de memes como This is fine, Turn down for what, Mind blown, I give up e Drake devem orientar apenas a atuação corporal e facial solicitada. O avatar continua isolado, sem cenário, texto, fogo, objetos ou efeitos independentes nesta distro.</p>
+<p>Não copie a identidade do personagem do meme. Descreva a intenção, o gesto e a expressão a serem reinterpretados pelo avatar validado. Se a pose esconder o rosto, preserve cabelo, silhueta, acessórios e roupa; a reconhecibilidade pode depender dessas pistas.</p>
+<h3 id="t-243">11 Guarda roupa e troca de cores</h3>
+<p>Separe mudanças de cor de mudanças de geometria. Camisa azul e camisa verde com o mesmo corte podem compartilhar uma base. Camisa social e polo possuem gola, botões, mangas e dobras diferentes e precisam de versões geométricas próprias. Cada versão deve manter a identidade e receber suas próprias máscaras nas poses necessárias.</p>
+<p>O projeto trouxe uma prova de conceito que identifica azuis e cinzas por regras de cor. Esse método serve para experimentar, mas pode recolorir óculos, sombras, pele ou acessórios que compartilhem tons. Para produção, use máscaras semânticas revisadas por peça e por quadro.</p>
+<h4 id="t-249">Máscaras mínimas de personalização</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Região</th><th scope="col">Deve incluir</th><th scope="col">Deve excluir</th></tr></thead><tbody>
+<tr><td>Camisa ou polo</td><td>Tecido e suas sombras</td><td>Pele, relógio, botões e frisos preservados</td></tr>
+<tr><td>Calça</td><td>Tecido e suas sombras</td><td>Mãos, cinto e calçados</td></tr>
+<tr><td>Cinto</td><td>Correia</td><td>Fivela, camisa e pele</td></tr>
+<tr><td>Sapatos</td><td>Material definido para troca</td><td>Calça, solado ou detalhes preservados</td></tr>
+</tbody></table></div>
+<p>Defina branco como região editável e preto como protegida. O kit usa máscara PNG em tons de cinza com valores somente 0 e 255, no mesmo tamanho do arquivo. Regiões editáveis de peças diferentes não podem se sobrepor. Pixels totalmente transparentes não devem ser selecionados.</p>
+<p>A troca deve preservar RGBA fora da união das máscaras e preservar o alfa em toda a imagem. Para pixel art com paleta controlada, mapeie cada cor de origem para uma cor de destino correspondente. Para fontes com muitos tons, use uma rampa calibrada de sombra, base e luz, com os mesmos pontos de luminância em toda a série. Calcular percentis novos a cada quadro pode criar oscilação de cor durante o movimento.</p>
+<p>Não trate a cor HEX escolhida como a média obrigatória do tecido renderizado. A luz e a sombra modificam a aparência. Aprove a rampa completa em fundos diferentes e na animação. Mudança para tecido branco, preto ou muito saturado exige conferir separação de volumes e contorno.</p>
+<p>O script tools/avatar_tools.py recolor implementa remapeamento exato e rampa compartilhada. Ele não encontra automaticamente as peças nem cria máscaras. É uma generalização técnica incluída nesta distro, testada com imagens sintéticas; precisa das máscaras e cores calibradas do novo avatar.</p>
+<h3 id="t-266">12 Acessórios e personalizações estruturais</h3>
+<p>Considere acessórios usados no corpo, como óculos, relógio, brincos, chapéu e colar. Defina quais fazem parte da identidade e quais são opcionais. Óculos característicos podem exigir nova versão de identidade ao serem removidos; um chapéu opcional pode ser apenas uma variante de aparência.</p>
+<p>Para cada acessório, registre dimensões relativas, lado anatômico, ponto de encaixe, partes que ficam na frente ou atrás e vistas em que ele se torna invisível. O comando accessories aplica camadas preparadas, em ordem, com posição inteira e máscara opcional de oclusão. Ele verifica preservação fora da área visível da camada; não desenha nem encaixa anatomicamente o acessório. A cor pode usar recolor com uma máscara específica, inclusive de armação ou brinco. Para retirar uma camada opcional, volte à base sem ela. A remoção de um item fundido à base pode exigir reparar a região escondida. A simples translação de um PNG frontal não resolve uma vista lateral. São necessárias vistas próprias ou uma composição compatível com a perspectiva.</p>
+<h4 id="t-272">Regras de encaixe e oclusão</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Situação</th><th scope="col">Tratamento</th></tr></thead><tbody>
+<tr><td>Óculos com lente além da silhueta do rosto</td><td>Conferir alfa da parte externa sem apagar armação e reflexos</td></tr>
+<tr><td>Relógio no braço distante</td><td>Respeitar a parte visível e a oclusão pelo corpo</td></tr>
+<tr><td>Chapéu sobre cabelo</td><td>Definir cobertura e preservar o cabelo original no arquivo base</td></tr>
+<tr><td>Brinco em um único lado</td><td>Manter lateralidade ao trocar a vista</td></tr>
+<tr><td>Manga sobre pulseira</td><td>Resolver ordem de camadas na pose correspondente</td></tr>
+</tbody></table></div>
+<p>As lentes exigem cuidado: lente sobre o rosto deve permitir a leitura da face; lente que ultrapassa a silhueta pode expor o fundo com alfa parcial ou total, conforme o estilo aprovado. No avatar Felipe, uma correção específica tornou transparente a área externa escolhida. Essa decisão não deve ser aplicada como preenchimento ou apagamento universal em outros avatares.</p>
+<p>Guarde as variantes com e sem acessório quando isso fizer parte do briefing. Registre incompatibilidades, como chapéu que não serve em um penteado alternativo ou relógio oculto por manga longa. Uma configuração só está disponível quando seus arquivos e encaixes foram produzidos e verificados.</p>
+<p>Customizações que mudam cabelo, barba ou silhueta facial devem ser apresentadas ao titular como versões de aparência, com nova aprovação visual. Não afirme que uma máscara de roupa permite qualquer transformação de identidade.</p>
+<h3 id="t-288">13 Preparação para animação</h3>
+<p>Um avatar animável precisa de continuidade entre quadros, canvas comum, ponto de ancoragem, fases e durações. A existência de poses diferentes não constitui uma animação pronta. Defina previamente câmera, direções, enquadramento e movimento desejado, sem depender de uma mecânica de jogo.</p>
+<p>Para um repertório polivalente, a sequência sugerida é piscar e fala demonstrativa em busto, respiração ou repouso em corpo inteiro, aceno e caminhada. Outros movimentos podem ser acrescentados conforme a aplicação. Quedas, saltos e corridas não são requisitos universais.</p>
+<h4 id="t-294">Contrato técnico de uma sequência</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Campo</th><th scope="col">Definição</th></tr></thead><tbody>
+<tr><td>Canvas</td><td>Mesma largura e altura em todos os quadros</td></tr>
+<tr><td>Origem</td><td>Canto superior esquerdo, x cresce à direita e y para baixo</td></tr>
+<tr><td>Pivô</td><td>Ponto lógico comum, como centro de apoio entre os pés</td></tr>
+<tr><td>Direção</td><td>Sul frontal, norte costas, oeste esquerda e leste direita nesta convenção</td></tr>
+<tr><td>Fase</td><td>Pose e apoio identificados em cada quadro</td></tr>
+<tr><td>Duração</td><td>Tempo individual em milissegundos</td></tr>
+<tr><td>Movimento</td><td>No lugar ou com deslocamento de raiz declarado</td></tr>
+<tr><td>Loop</td><td>Relação entre último e primeiro quadro</td></tr>
+</tbody></table></div>
+<p>As coordenadas do kit são inteiras, com retângulos no formato x, y, largura, altura. As caixas de recorte seguem limites superiores exclusivos. Um contato inferior definido em y=1488 significa último pixel em y=1487, caso a convenção seja limite exclusivo. Especifique a convenção em vez de usar “pé em 1488” de modo ambíguo.</p>
+<p>Escolha a dimensão pelo maior alcance da sequência e uma margem de segurança. Não recorte automaticamente cada quadro pela silhueta: isso muda o enquadramento e causa saltos. Um busto pode usar uma âncora no tronco; um corpo inteiro pode usar o apoio dos pés. O pivô não precisa ser um pixel visível em todos os quadros, especialmente em movimentos com fase aérea.</p>
+<p>Se houver várias direções, valide primeiro as bases estáticas sob a mesma câmera. Normalizar altura e pés por código não corrige perspectiva ou anatomia incompatíveis. Trate cada vista como uma representação coerente da mesma pessoa.</p>
+<h3 id="t-313">14 Construção dos ciclos de movimento</h3>
+<p>Planeje as fases antes de gerar. Uma caminhada de oito quadros pode distribuir contato, apoio, passagem e alcance nas duas metades do ciclo. Essa organização foi usada nos pacotes, mas os nomes das fases não provam que a anatomia esteja correta. O pé de apoio, a trajetória e as sobreposições devem ser vistos em sequência.</p>
+<p>Comece pela direção que permita avaliar melhor o movimento. No projeto, o sul foi refinado e aprovado antes da consolidação das quatro direções. Use uma base por direção, guias de fase e, quando necessário, propostas individuais. A ordem final deve seguir o movimento observado, não necessariamente a ordem em que os arquivos foram gerados.</p>
+<p>Preserve a cabeça por composição quando a orientação for compatível. Deixe-a acompanhar o movimento com translações inteiras. O tronco e os ombros podem receber articulação ou deformação controlada. Confira a junção do pescoço e da gola; mistura de duas camisas pode duplicar botões ou criar uma faixa semitransparente.</p>
+<h4 id="t-321">Parâmetros do caso Felipe e sua interpretação</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Registro histórico</th><th scope="col">Interpretação replicável</th></tr></thead><tbody>
+<tr><td>Oito quadros por direção, 125 ms cada</td><td>Ciclo de 1 s a 8 quadros por segundo</td></tr>
+<tr><td>Canvas final 960 por 1568 px e pivô 480,1488</td><td>Configuração do lote 05, sem valor universal</td></tr>
+<tr><td>Cabeça com balanço vertical de menos 12 a mais 12 px</td><td>Ajuste artístico proporcional à escala daquela fonte</td></tr>
+<tr><td>Sul preservado com margem lateral adicionada</td><td>Alterar canvas não exige redimensionar o desenho</td></tr>
+<tr><td>Leste derivado do oeste com correções locais</td><td>Espelhamento exige tratar assimetrias e revisar</td></tr>
+</tbody></table></div>
+<p>Os ciclos norte, oeste e leste constam como estudos sujeitos à revisão visual no lote 05; o sul da revisão 02 do lote 04 tem aceite registrado. Não declare todos como aprovados por terem passado em testes de arquivo.</p>
+<p>Avalie a animação em velocidade normal, lenta e quadro a quadro. Observe cabeça flutuando, ombros rígidos, deslizamento dos pés, volume variável, cintilação de textura e descontinuidade na emenda. Uma cabeça perfeitamente copiada pode continuar parecendo colada se não acompanhar a dinâmica do corpo.</p>
+<p>Para caminhar no lugar, mantenha o pivô do conjunto estável, mas permita que os pés avancem e recuem dentro do canvas conforme as fases. Deslocamento no espaço e sincronização com o passo pertencem à integração de destino, que precisa de teste próprio.</p>
+<h3 id="t-337">15 Resolução transparência e formatos</h3>
+<p>Guarde o original recebido do gerador e a versão preparada. Resolução do arquivo, dimensão visível do personagem e densidade aparente de pixel são grandezas diferentes. Ampliar de 1x para 4x por vizinho mais próximo deixa os blocos maiores e nítidos, sem criar informação. Regerar em maior dimensão pode produzir detalhe novo, mas exige nova avaliação de fidelidade.</p>
+<p>Não reduza ou quantize automaticamente o master HD para fazê-lo parecer pixel art. Se uma versão de menor resolução for desejada, exporte uma derivação identificada e compare olhos, boca, barba, acessórios e contorno. Quantização pode destruir tons e alfa. Uma versão reduzida aceita não substitui o original.</p>
+<h4 id="t-343">Formatos de entrega</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Formato</th><th scope="col">Uso adequado</th><th scope="col">Limite relevante</th></tr></thead><tbody>
+<tr><td>PNG RGBA</td><td>Masters e quadros individuais</td><td>Não contém estrutura de rig</td></tr>
+<tr><td>Atlas PNG e JSON</td><td>Sequências e recortes documentados</td><td>Conferir limite de textura do destino</td></tr>
+<tr><td>APNG</td><td>Prévia e animação com alfa</td><td>Testar o suporte no aplicativo de uso</td></tr>
+<tr><td>GIF</td><td>Prévia simples de ampla circulação</td><td>Paleta limitada e transparência restrita</td></tr>
+<tr><td>WebM ou outro vídeo</td><td>Vídeo conforme o destino</td><td>Alfa depende de codec e suporte real</td></tr>
+<tr><td>SVG</td><td>Apenas vetor efetivamente construído</td><td>Incorporar PNG não o transforma em vetor</td></tr>
+</tbody></table></div>
+<p>No navegador, prefira image-rendering pixelated quando adequado ao estilo e evite interpolação suave entre quadros raster. Transições de opacidade entre duas poses podem produzir rostos duplicados. A escala final ainda precisa ser conferida no dispositivo de destino.</p>
+<p>Memória de textura descomprimida pode ser estimada por largura vezes altura vezes 4 bytes para RGBA de 8 bits. O atlas histórico de 7680 por 6272 px consome cerca de 184 MiB apenas para uma cópia decodificada. Exportações menores ou separadas por sequência podem ser mais adequadas; preserve os HD independentemente da otimização.</p>
+<p>Adicione borda clara para fundo escuro apenas como derivação explícita e aprovada. Ela altera a silhueta e pode ficar espessa demais em tamanhos pequenos. Verifique contorno, lentes e mãos sobre branco, preto e uma cor saturada, além do fundo real de destino.</p>
+<h3 id="t-360">16 Verificação e aceite</h3>
+<p>Mantenha quatro estados independentes: identidade, revisão artística, preparação técnica e integração no destino. Use pendente, aprovado, reprovado ou não aplicável. “Novo para revisão visual” significa que a imagem existe, não que tenha sido aceita.</p>
+<h4 id="t-364">Critérios por etapa</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Etapa</th><th scope="col">Evidência mínima para avançar</th></tr></thead><tbody>
+<tr><td>Entrada</td><td>Referências legíveis, aparência escolhida e lados confirmados</td></tr>
+<tr><td>Folha mestra</td><td>Aceite do titular com versão e arquivos identificados</td></tr>
+<tr><td>Expressões e poses</td><td>Comparação com a folha, anatomia e enquadramento revisados</td></tr>
+<tr><td>Cor</td><td>Máscaras revisadas, alfa e pixels externos preservados</td></tr>
+<tr><td>Movimento</td><td>Canvas, pivô, fases, durações e revisão visual do ciclo</td></tr>
+<tr><td>Exportação</td><td>Decodificação integral, hashes e comparação das derivações</td></tr>
+<tr><td>Destino</td><td>Reprodução e transparência vistas no aplicativo real</td></tr>
+</tbody></table></div>
+<p>O teste de edição localizada exige zero diferenças fora da máscara autorizada, comparando canais RGBA na mesma resolução. Se houver uma correção de alfa, ela deve estar explicitamente autorizada e registrada em máscara própria. Para cabeça transladada, alinhe as regiões antes de comparar. Um arquivo que tem hash diferente pode conter os mesmos pixels com compressão diferente; distinga integridade de bytes de igualdade visual ou RGBA.</p>
+<p>Decodifique todos os quadros de um APNG, confira quantidade, duração e igualdade com os PNGs de origem. Testar apenas o primeiro quadro é insuficiente. Em um HTML com imagens incorporadas, verifique o PNG inteiro e sua correspondência com a fonte. Um cabeçalho válido não garante um arquivo completo.</p>
+<p>O preview precisa ser aberto em um navegador real. Teste reprodução, pausa, quadro manual, direção, fundo, download, tamanho de uso e funcionamento sem rede se prometido. Testes de lógica simulada não comprovam renderização. Os pacotes antigos registram essa limitação; não a transforme em aprovação retrospectiva.</p>
+<p>Os scripts desta distro verificam propriedades declaradas de arquivos, máscaras e sequências. Eles não detectam automaticamente todos os erros de anatomia, semelhança, perspectiva, fases ou acessórios. Registre quem fez a revisão visual e qual foi seu resultado.</p>
+<h3 id="t-384">17 Falhas frequentes e reparos</h3>
+<p>Corrija primeiro a causa que afeta a identidade e depois refine a atuação. Um resultado com rosto diferente não deve virar base só porque tem uma mão bem desenhada. Preserve o componente útil se ele puder ser composto de modo coerente.</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">Problema observado</th><th scope="col">Causa provável</th><th scope="col">Ação de reparo</th></tr></thead><tbody>
+<tr><td>Rosto muda a cada expressão</td><td>Geração integral e referências fracas</td><td>Usar base aceita e máscaras faciais</td></tr>
+<tr><td>Cabeça aumenta ao trocar de pose</td><td>Recortes e escalas independentes</td><td>Registrar marcos e conferir escala antes de compor</td></tr>
+<tr><td>Aparência fica lisa</td><td>Densidade ou textura diferente</td><td>Ajustar direção visual e aprovar derivação sem destruir HD</td></tr>
+<tr><td>Relógio troca de braço</td><td>Espelhamento sem correção</td><td>Recuperar lateralidade anatômica e revisar oclusão</td></tr>
+<tr><td>Lente cria mancha no fundo</td><td>Alfa preenchido ou composição acumulada</td><td>Revisar máscara de lente e substituir pixels corretamente</td></tr>
+<tr><td>Roupa colore pele ou armação</td><td>Seleção global por cor</td><td>Usar máscara semântica por peça</td></tr>
+<tr><td>Cor pulsa durante a animação</td><td>Normalização independente por quadro</td><td>Aplicar a mesma rampa calibrada em toda a série</td></tr>
+<tr><td>Personagem salta no canvas</td><td>Recorte por quadro ou pivô inconsistente</td><td>Restaurar canvas e âncora comuns</td></tr>
+<tr><td>Gola fica dupla</td><td>Transição entre fontes sobrepostas</td><td>Reconstruir junção sem misturar silhuetas duplicadas</td></tr>
+<tr><td>Movimento parece travar</td><td>Fase repetida, ordem ou duração inadequada</td><td>Revisar sequência e emenda em velocidade normal</td></tr>
+<tr><td>APNG ou imagem incorporada falha</td><td>Arquivo incompleto</td><td>Reexportar, decodificar integralmente e renovar os testes</td></tr>
+</tbody></table></div>
+<p>Não reutilize um relatório de aprovação depois de alterar arquivos ou detectar falhas. Gere um novo relatório ligado à versão e aos hashes atuais. Uma correção local pode exigir revisar também atlas, APNG e preview, pois essas cópias podem continuar contendo a versão antiga.</p>
+<p>Se um componente não puder ser preservado com perspectiva ou anatomia coerentes, gere novamente apenas o necessário e registre que houve nova arte. “Determinístico” descreve uma composição efetivamente reprodutível a partir de arquivos, máscaras e parâmetros, não a expectativa de que o gerador obedeça ao prompt.</p>
+<h3 id="t-406">18 Organização e distribuição por avatar</h3>
+<p>Cada avatar deve ter sua própria pasta e seu identificador. Use nomes sem espaços ou acentos para caminhos técnicos. Mantenha identidade, roupa, vista, ação, quadro e versão no manifesto; o nome do arquivo pode resumir esses campos sem se tornar excessivamente longo.</p>
+<p>Exemplo de nome: pessoa01_social_andar_leste_f03_v1.png. O índice f03 identifica a ordem final da animação, enquanto o registro de origem aponta qual tentativa gerada foi selecionada. Nunca altere a origem para fazê-la coincidir artificialmente com a ordem final.</p>
+<h4 id="t-412">Estrutura recomendada para um novo avatar</h4>
+<div class="table-scroll"><table><thead><tr><th scope="col">Pasta</th><th scope="col">Conteúdo</th></tr></thead><tbody>
+<tr><td>privado</td><td>Fotos e registros de entrada com acesso controlado</td></tr>
+<tr><td>ref</td><td>Folha mestra aceita, bases e guias identificados</td></tr>
+<tr><td>gen</td><td>Propostas originais e registro de prompts</td></tr>
+<tr><td>src</td><td>Imagens preparadas, componentes e máscaras</td></tr>
+<tr><td>dist</td><td>PNGs, atlas e animações destinados ao uso</td></tr>
+<tr><td>docs</td><td>Ficha, decisões, aprovação, método e relatórios</td></tr>
+<tr><td>tools</td><td>Receitas e scripts necessários à reconstrução</td></tr>
+</tbody></table></div>
+<p>O pacote de uso não precisa conter fotos pessoais ou propostas descartadas. O pacote de manutenção pode guardá-las separadamente quando necessário e autorizado. O pacote desta metodologia contém apenas instruções, modelos e ferramentas genéricas, sem imagens pessoais do caso de referência.</p>
+<p>Registre no manifesto dimensões, cor, alfa, pivô, duração, versão mestre, origem, transformações e SHA-256. Dados desconhecidos devem permanecer nulos ou pendentes. Confira se uma alteração de canvas também atualizou pivô e retângulos do atlas.</p>
+<p>Uma alteração de identidade pode justificar uma versão principal; adicionar uma pose pode justificar uma versão secundária; corrigir um PNG incompleto pode justificar uma revisão de correção. Esse esquema de versionamento é uma convenção proposta. O histórico deve explicar a mudança independentemente do número escolhido.</p>
+<p>Antes de entregar, confira links relativos, ausência de arquivos privados, instruções de abertura, dependências e estados pendentes. Uma distro reutilizável precisa permitir que outra pessoa descubra o que fornecer e como verificar o resultado sem conhecer a conversa original.</p>
+<h3 id="t-432">19 Roteiro de replicação</h3>
+<p>O percurso abaixo organiza a execução por dependência, sem prometer duração fixa ou quantidade de gerações. Cada pessoa e cada estilo exigem um número diferente de revisões. Registre tempo e tentativas reais para estimar projetos futuros.</p>
+<h4 id="t-436">Primeira entrega de identidade</h4>
+<ol><li>Copie os modelos e crie o identificador do novo avatar.</li><li>Selecione as fotos e preencha a aparência desejada no briefing.</li><li>Peça o diagnóstico visual, corrija divergências e confirme a lateralidade.</li><li>Valide busto neutro, corpo e vistas; monte a folha mestra com os escolhidos.</li><li>Registre a aprovação e congele a versão mestre.</li></ol>
+<h4 id="t-444">Primeira biblioteca versátil</h4>
+<ol><li>Aprove um pequeno conjunto de expressões e poses úteis.</li><li>Escolha roupas geométricas e delimite as máscaras de cada peça.</li><li>Teste duas combinações de cor com o mesmo arquivo base, sem regenerá-lo.</li><li>Produza piscar, uma fala demonstrativa e um movimento simples.</li><li>Revise tamanhos de uso, transparência, mãos e acessórios.</li></ol>
+<h4 id="t-452">Expansão e animação</h4>
+<ol><li>Aprove as bases nas direções realmente necessárias.</li><li>Construa e revise uma caminhada antes de replicar para outras direções.</li><li>Exporte quadros, manifesto, APNG e preview; faça a conferência no destino.</li><li>Registre pendências e só então planeje novos movimentos ou aparências.</li></ol>
+<p>Para iniciar ou transferir o trabalho a outra conversa, anexe INICIAR_AVATAR.md, a ficha preenchida, a folha mestra e a base operacional do lote. Inclua o registro de decisões e informe a última aprovação. Reenviar só o prompt não transmite a identidade visual nem o histórico de aceite.</p>
+<p>O piloto de replicação desta distro deve ser realizado com uma segunda pessoa antes de classificá-la como validada em múltiplos avatares. Verifique se o operador conseguiu seguir o método, se as máscaras funcionaram no estilo escolhido e se a pessoa reconheceu sua representação em todas as saídas. Esta versão documenta e generaliza o caso Felipe; não declara esse piloto concluído.</p>
+<h3 id="t-463">20 Uso das ferramentas incluídas</h3>
+<p>As ferramentas não chamam serviços de geração. Elas auditam PNGs, comparam edições, compõem propostas alinhadas, trocam cores, aplicam acessórios preparados, auxiliam na triagem técnica de fotos e empacotam sequências de quadros. O código foi preparado para ser lido e adaptado, com testes sintéticos que verificam invariantes de preservação e exportação.</p>
+<h4 id="t-467">Instalação e comandos</h4>
+<p>Crie um ambiente Python e instale tools/requirements.txt. No Windows, o comando inicial pode ser py em vez de python. Os comandos completos estão em tools/LEIA-ME.md e devem ser executados na raiz da distro. Use cópias dos arquivos e caminhos de saída novos.</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">Comando</th><th scope="col">Função</th></tr></thead><tbody>
+<tr><td>audit</td><td>Decodificar PNGs e registrar dimensões, alfa e hashes</td></tr>
+<tr><td>compare</td><td>Contar alterações dentro e fora de uma máscara</td></tr>
+<tr><td>compose</td><td>Substituir pixels de uma proposta alinhada somente na máscara</td></tr>
+<tr><td>recolor</td><td>Aplicar cores somente nas máscaras declaradas</td></tr>
+<tr><td>accessories</td><td>Aplicar camadas preparadas com posição e oclusão</td></tr>
+<tr><td>photo-audit</td><td>Ler fotos e registrar indicadores para revisão visual</td></tr>
+<tr><td>pack</td><td>Exportar atlas, APNG, JSON e preview de uma sequência</td></tr>
+</tbody></table></div>
+<p>O pack recebe um JSON com lista ordenada de PNGs, duração por quadro e pivô. Ele recusa quadros idênticos, pois um codificador pode fundir repetições e alterar a estrutura esperada. Um repouso estático deve ser entregue como PNG; uma pausa mais longa dentro de um ciclo deve ser representada pela duração do quadro correspondente. A exportação de várias direções deve usar uma configuração por direção.</p>
+<p>O preview produzido pelo pack incorpora as imagens e oferece reprodução, pausa, seleção manual e troca de fundo. Ele é um instrumento de inspeção, não uma integração certificada. Abra-o no navegador real e registre o resultado. A distro não inclui um jogo ou aplicativo de avatar completo.</p>
+<p>Os relatórios em testes/RELATORIO_VALIDACAO.md registram o que foi executado nesta entrega. Eles não validam automaticamente o conjunto de arquivos que outra pessoa produzirá. Execute os testes de novo após adaptar o código ou alterar as regras de exportação.</p>
+<h3 id="t-487">21 Limites e manutenção da metodologia</h3>
+<p>A fidelidade pode variar com novos modelos, interfaces e estilos. Mantenha um pequeno conjunto de imagens de teste e compare mudanças de ferramenta antes de migrar uma biblioteca inteira. Preservar as referências e os originais permite voltar a uma versão aceita.</p>
+<p>As operações determinísticas exigem componentes compatíveis. Colar uma cabeça frontal em corpo de perfil, transportar uma máscara para outra pose sem alinhamento ou reaproveitar um relógio sem resolver oclusão pode produzir erros mesmo que o código execute sem falhar. O operador continua responsável por escolher transformações coerentes.</p>
+<p>Esta distro prepara avatares raster em duas dimensões. Ela não gera automaticamente um modelo 3D, um rig esquelético, uma topologia vetorial ou animação facial completa. Essas saídas exigiriam outro contrato técnico e outra produção. A variedade de poses e quadros amplia a utilidade do avatar dentro das capacidades efetivamente entregues.</p>
+<p>Para melhorar o método após cada aplicação, registre qual etapa exigiu intervenção, qual instrução foi ambígua e qual diferença visual escapou aos testes. Acrescente uma regra somente quando ela resolver um problema observado e puder ser explicada para o próximo operador. Evite transformar particularidades de uma pessoa em exigências universais.</p>
+<h3 id="t-497">Anexo A Fontes internas consultadas</h3>
+<p>Os nomes abaixo identificam os pacotes do projeto usados como evidência. Eles não são dependências de execução desta distro e suas imagens não foram redistribuídas.</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">Pacote</th><th scope="col">Documentos principais e contribuição</th></tr></thead><tbody>
+<tr><td>avatar-felipe_especificacao-fidelidade-v1.zip</td><td>Especificação 002, medidas e limitações do QA por cor; status de proposta</td></tr>
+<tr><td>avatar-felipe_fiel-v1.zip</td><td>Ficha 001, manifesto e organização das referências fiéis</td></tr>
+<tr><td>avatar-felipe_onda1_fundacao.zip</td><td>Ficha consolidada, prancha matriz e fundação como origem de identidade</td></tr>
+<tr><td>avatar-felipe_onda2_referencia.zip</td><td>Ficha, manifesto e referência de olhos e vistas</td></tr>
+<tr><td>avatar-felipe_onda2F_prancha2-expressoesA.zip</td><td>README, v2 aprovada, v3 reprovada e limitações de métricas</td></tr>
+<tr><td>avatar-felipe_poc-palette-swap.zip</td><td>Código de recoloração experimental e comparação de cores</td></tr>
+<tr><td>avatar_felipe_lote01_hd.zip</td><td>Critérios, edição por máscaras, alfa de lentes e decodificação integral</td></tr>
+<tr><td>avatar_felipe_lote02_poses_hd.zip</td><td>Poses individuais, lateralidade, reparo localizado e margens</td></tr>
+<tr><td>avatar_felipe_lote03_amigaveis_rpg.zip</td><td>Complementos faciais e estudos estáticos em quatro direções</td></tr>
+<tr><td>avatar_felipe_lote04_caminhada_sul (1).zip</td><td>Revisão 02, articulação de cabeça e ombros e preservação de regiões</td></tr>
+<tr><td>avatar_felipe_lote05_caminhada_4direcoes (1).zip</td><td>Revisão 02, manifestos, reconstrução, espelhamento corrigido e limites</td></tr>
+</tbody></table></div>
+<p>A etapa inicial no Claude é atribuída ao relato do titular na solicitação de 28 de outubro de 2026. As recomendações sobre quantidade de fotos, sequência de validação, novos modelos de ficha e ferramentas genéricas são propostas desta distro.</p>
+<h3 id="t-517">Anexo B Referências técnicas externas</h3>
+<p>Consultadas em 28 de outubro de 2026. As referências fundamentam somente as observações sobre uso e limites do gerador; as regras de produção são a síntese operacional desta distro.</p>
+<p>E1. OpenAI. Image generation. https://developers.openai.com/api/docs/guides/image-generation</p>
+<p>E2. OpenAI. Image prompting. https://developers.openai.com/api/docs/guides/image-prompting</p>
+<p>As instruções locais da skill imagegen foram consultadas para orientar o uso de referências, a declaração de invariantes, as iterações locais e a verificação de transparência. A versão 1.2 incorpora o snapshot integral da skill imagegen e seu código, licença e referências no módulo skills/avatar-imagens. O upload não instala automaticamente uma skill nem concede acesso ao motor generativo.</p>
+<h3 id="t-527">Anexo C Vocabulário operacional</h3>
+<div class="table-scroll"><table><thead><tr><th scope="col">Termo</th><th scope="col">Significado nesta distro</th></tr></thead><tbody>
+<tr><td>Folha mestra</td><td>Conjunto visual aceito que define a identidade estilizada</td></tr>
+<tr><td>Base operacional</td><td>Arquivo de trabalho aceito para um enquadramento ou direção</td></tr>
+<tr><td>Deriva</td><td>Alteração acumulada de aparência entre gerações</td></tr>
+<tr><td>Máscara</td><td>Imagem que delimita a região autorizada de edição</td></tr>
+<tr><td>Patch</td><td>Recorte de substituição com posição e regra de composição</td></tr>
+<tr><td>Alfa</td><td>Canal que controla a transparência de cada pixel</td></tr>
+<tr><td>Palette swap</td><td>Troca controlada de cores preservando a geometria</td></tr>
+<tr><td>Atlas</td><td>Imagem que reúne quadros em células documentadas</td></tr>
+<tr><td>Pivô</td><td>Âncora lógica para posicionar um quadro ou sequência</td></tr>
+<tr><td>Visema</td><td>Representação visual simplificada associada a sons de fala</td></tr>
+<tr><td>Fonte original</td><td>Arquivo recebido antes de recorte e preparo</td></tr>
+<tr><td>Reconstrução</td><td>Reexecução de operações registradas sobre fontes guardadas</td></tr>
+<tr><td>Aceite</td><td>Registro explícito da avaliação por pessoa responsável</td></tr>
+</tbody></table></div>
+<h3 id="t-546">Anexo D Módulo de imagem incluído</h3>
+<p>O módulo embutido reúne SKILL.md, procedimentos completos, snapshot integral do provedor, requisitos de Python, diagnóstico sem rede, preparação de pedidos e scripts locais. Resize ajusta dimensões e encaixe; resample escolhe a amostragem. Nearest é o padrão de pixel art e é obrigatório para máscaras binárias. Outros filtros usam alfa pré-multiplicado. Os relatórios registram escala, deslocamento e recorte, para atualizar pivôs e máscaras.</p>
+<p>O procedimento de edição por texto usa geração nativa ou a CLI original, se a rota API for explicitamente escolhida. Composição por máscara e comparação asseguram a preservação externa quando aplicáveis. Um arquivo de instrução não contém pesos de modelo, licença de uso de conta ou credenciais. As dependências estão declaradas e há um preparador opcional de ambiente; elas não são bibliotecas binárias embarcadas.</p></main></body></html>
