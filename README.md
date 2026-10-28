@@ -19,7 +19,7 @@ Você não precisa preencher fichas, escolher prompts ou programar para começar
 - prompts e modelos: apoio de produção e registros preenchidos pela IA.
 - tools e testes: operações técnicas e verificações.
 
-O método serve a qualquer gênero e idade representada, conforme referências e escolhas do usuário. Não impõe um modelo masculino adulto. O pacote não contém fotos ou imagens pessoais de Felipe.
+O método serve a qualquer gênero e idade representada, conforme referências e escolhas do usuário. Não impõe um modelo masculino adulto.
 
 A IA avalia as fotos antes de gerar. Trocar só cor usa máscaras e código; mudar o modelo da roupa ou criar um acessório exige arte própria. O guia explica cada situação em linguagem simples.
 
